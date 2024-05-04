@@ -1,0 +1,9 @@
+.scroll-button-down:hover {
+    animation: moveMenushow 0.6s linear forwards;
+  }
+
+  @keyframes moveMenushow {
+    100% {
+      transform: translateY(-40%);
+    }
+  }
