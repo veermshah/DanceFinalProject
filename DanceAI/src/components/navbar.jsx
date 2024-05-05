@@ -42,6 +42,13 @@ export default function Navbar() {
                                     </a>
                                 </li>
                             </ul>
+                            <div className="flex-grow"></div>
+                            <a
+                                href="https://github.com/veermshah"
+                                className="text-lg font-bold font-serif text-white mx-8"
+                            >
+                                Website By Veer S.
+                            </a>
                         </div>
                     </nav>
                 </section>

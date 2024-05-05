@@ -14,6 +14,13 @@ const UserPose = () => {
     const landmarkRef = useRef(null);
     // landmarkRef = new LandmarkGrid(landmarkContainer);
     let camera = null; // variable to initialize the camera
+    // List of predefined poses
+    // const predefinedPoses = [
+    //     { name: "Pose A", landmarks: [...], /* Define landmark coordinates */ },
+    //     { name: "Pose B", landmarks: [...], /* Define landmark coordinates */ },
+    //     // Add more predefined poses as needed
+    // ];
+
     // function to draw the landmarks once the pose has been determnined
     function onResults(results) {
         // Define the canvas elements
@@ -76,7 +83,7 @@ const UserPose = () => {
         <div>
             <div className="App">
                 <NavBar />
-                <div className="flex justify-center items-center py-16 px-16">
+                <div className="flex justify-center items-center pt-16 px-16">
                     <motion.h1
                         className="text-6xl text-white font-serif"
                         initial={{ opacity: 0 }}
@@ -85,6 +92,31 @@ const UserPose = () => {
                     >
                         Pose Estimation Dance Tutorial
                     </motion.h1>
+                </div>
+                <div className="px-16 py-10">
+                    <motion.p
+                        className="text-lg text-white font-serif mb-5"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 1 }}
+                    >
+                        This may take a second to load.
+                    </motion.p>
+                    <motion.p
+                        className="text-lg text-white font-serif"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 1 }}
+                    >
+                        Many pose estimation technologies for learning dances
+                        and improving dance techniques have been released but
+                        unfortunately not many are free. I implemented the{" "}
+                        <span className="text-purple-500">
+                            MediaPipe Pose model
+                        </span>{" "}
+                        to estimate your pose on this page. This lets you
+                        compare your poses to that of the video below.
+                    </motion.p>
                 </div>
                 <div style={{ position: "relative" }}>
                     <Webcam

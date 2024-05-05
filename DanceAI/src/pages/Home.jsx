@@ -1,10 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import "../App.css";
 import Navbar from "../components/navbar";
 import BackToTopButton from "../components/BackToTop";
 
 export default function Home() {
+    const navigate = useNavigate();
     return (
         <div>
             <div className="relative">
@@ -77,10 +79,10 @@ export default function Home() {
             >
                 Just like AI image and text generators like ChatGPT and DALL-E,
                 EDGE steps onto the stage as a choreographer's{" "}
-                <span className="text-purple-500">dream assistant.</span>
-                This innovative tool allows dance artists to delve into a world
-                of iterative refinement, meticulously shaping their sequences
-                one move, one position at a time. Imagine seamlessly inserting
+                <span className="text-purple-500">dream assistant.</span> This
+                innovative tool allows dance artists to delve into a world of
+                iterative refinement, meticulously shaping their sequences one
+                move, one position at a time. Imagine seamlessly inserting
                 specific poses at precise moments – EDGE takes these details and
                 seamlessly integrates them into the evolving choreography. The
                 future holds even more possibilities, with EDGE soon allowing
@@ -148,25 +150,99 @@ export default function Home() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 5.5, duration: 1 }}
-                    className="relative w-48 h-12 flex items-center justify-center rounded-full border border-white bg-black text-white text-lg font-serif"
+                    className="relative w-48 h-12 flex items-center justify-center rounded-full border border-white bg-black hover:bg-purple-500 text-white text-lg font-serif"
                 >
                     LEARN MORE
                 </motion.div>
             </div>
             <div className="flex justify-between">
-                <img
+                <motion.img
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 6, duration: 1 }}
                     src="livingArchive.jpg" // Replace with the actual path to your first image
                     alt="Image 1"
                     className="w-1/2 h-auto mr-2"
                 />
-                <img
-                    src="livingArchive2.jpg" // Replace with the actual path to your second image
-                    alt="Image 2"
-                    className="w-1/2 h-auto ml-2"
+                <motion.img
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 6, duration: 1 }}
+                    src="livingArchive2.jpg" // Replace with the actual path to your first image
+                    alt="Image 1"
+                    className="w-1/2 h-auto mr-2"
                 />
             </div>
-            <div className="text-center mt-2 font-serif text-sm text-gray-400">
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 6, duration: 1 }}
+                className="text-center mt-2 font-serif text-sm text-gray-400"
+            >
                 Images from Living Archive: An AI Performance Experiment
+            </motion.div>
+            <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 6.5, duration: 1 }}
+                className="relative text-white font-serif text-xl px-16 py-5"
+            >
+                Another application of Machine Learning to dance is Pose
+                Estimation (PE). PE is when a computer vision model is trained
+                to detect the poses of objects, and in this case, humans.
+                Comparing the poses drawn between professional dancers and dance
+                students can tell a student what they are lacking and how to
+                improve their technique. Pose estimation software can analyze a
+                dancer's movement and provide real-time feedback on their form.
+                This can help dancers identify misalignments, ensure proper
+                technique, and track their progress over time. With a pose
+                estimation system, dancers can practice independently and
+                receive immediate feedback without relying solely on a teacher
+                or mirror.
+            </motion.p>
+            <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 6.5, duration: 1 }}
+                className="relative text-white font-serif text-xl px-16 pb-5"
+            >
+                Pose estimation offers a more objective analysis of movement
+                compared to subjective feedback from a teacher. This can be
+                helpful for dancers who want a data-driven approach to improving
+                their technique. Some pose estimation systems can even be used
+                to generate new dance movements based on a dancer's input. This
+                can spark creativity and help dancers explore new possibilities
+                in their choreography. Below is an example of pose estimation
+                being used on a dancer.
+            </motion.p>
+            <div className="relative mx-20 my-10">
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 6.5, duration: 1 }}
+                    className="h-auto"
+                >
+                    <video autoPlay loop muted className="w-full">
+                        <source src="poseEstimation.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </motion.div>
+            </div>
+            <div
+                className="relative px-16 pb-10"
+                onClick={() => {
+                    // Your click event logic here
+                    navigate("/ai");
+                }}
+            >
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 6.5, duration: 1 }}
+                    className="relative w-1/2 h-12 flex items-center justify-center rounded-full border border-white bg-black hover:bg-purple-500 text-white text-lg font-serif"
+                >
+                    SIMPLE POSE ESTIMATION DEMO
+                </motion.div>
             </div>
 
             <BackToTopButton />

@@ -1,22 +1,25 @@
 import React from "react";
-import "../App.css";
 import Navbar from "../components/navbar";
 
 export default function Sources() {
     const googleDocsUrl =
-        "https://docs.google.com/document/d/e/2PACX-1vR1ewhvInzUmwGWi7LXckhmi_32kLO1GRikntB4IGc1Kc3x1wk46PwR5K_ZsADKcLAXBA7u9cQtBPaP/pub?embedded=true";
+        "https://docs.google.com/document/d/e/2PACX-1vSk5SwQVgDUudmBYwLNYPyvKzJXQ5fogV0l461FZ5khiX62llR8HtwcmyAXcp1wZ6r0EK--lJjWAXkv/pub?embedded=true";
 
     return (
         <div>
             <Navbar />
-            <iframe
-                title="Google Docs Viewer"
-                src={googleDocsUrl}
-                width="100%"
-                height="5000"
-            >
-                Loading...
-            </iframe>
+
+            <div className=" items-center justify-center h-screen mt-5 mx-16">
+                <iframe
+                    title="Google Docs Viewer"
+                    src={googleDocsUrl}
+                    width="100%"
+                    height="1000"
+                    className="border border-gray-300 rounded-md"
+                >
+                    Loading...
+                </iframe>
+            </div>
         </div>
     );
 }
