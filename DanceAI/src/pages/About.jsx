@@ -8,16 +8,19 @@ export default function About() {
     return (
         <div>
             <Navbar />
-            <div className="about-container text-white text-4xl font-serif mx-16 my-5">
-                <h1>Welcome to My Website</h1>
-                <p>Feel free to check out the source code on GitHub:</p>
+            <div className="about-container text-white  font-serif mx-16 my-5">
+                <h1 className="text-4xl">Welcome to My Website</h1>
+                <p className="text-xl">
+                    Hi there! I am Veer Shah and I created this website for DANC1310 - Understanding Dance.
+                    Feel free to check out the source code on GitHub:
+                </p>
                 <div className="my-5"></div>
                 <motion.a
                     href="https://github.com/veermshah/DanceFinalProject"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 5 }}
-                    className="github-button "
+                    className="github-button text-6xl"
                 >
                     <FaGithub />
                 </motion.a>

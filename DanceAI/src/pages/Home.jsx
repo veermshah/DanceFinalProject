@@ -11,10 +11,13 @@ export default function Home() {
         <div>
             <div className="relative">
                 <Navbar />
+                <div className="h-28"></div>
+                <div className="h-28"></div>
+
                 <div className="relative">
                     <motion.div
                         initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
+                        whileInView={{ opacity: 1, y: -200 }}
                         transition={{ duration: 1 }}
                         className="h-auto"
                     >
@@ -26,22 +29,23 @@ export default function Home() {
                 </div>
                 <motion.h1
                     initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 1, duration: 1 }}
+                    whileInView={{ opacity: 1, y: -200 }}
+                    transition={{ duration: 1 }}
                     className="absolute bottom-0 left-0 px-16 pb-16 text-4xl font-bold text-white font-serif"
                 >
-                    How Has AI Changed Dance?
+                    How Has AI/ML Changed Dance?
                 </motion.h1>
             </div>
             <motion.p
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 2, duration: 1 }}
+                whileInView={{ opacity: 1, y: -200 }}
+                transition={{ duration: 1 }}
                 className="relative text-white font-serif text-xl px-16 py-10"
             >
                 The world of dance is no stranger to innovation, and{" "}
-                <span className="text-purple-500">generative AI</span> is the
-                latest revolution stirring things up. From assisting
+                <span className="text-purple-500">generative AI</span> and{" "}
+                <span className="text-purple-500">machine learning</span> are
+                the latest revolution stirring things up. From assisting
                 choreographers in creating groundbreaking moves to transforming
                 the way audiences experience dance, AI is leaving its mark. This
                 powerful technology is not here to replace the human touch in
@@ -50,8 +54,8 @@ export default function Home() {
             </motion.p>
             <motion.p
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 2.5, duration: 1 }}
+                whileInView={{ opacity: 1, y: -200 }}
+                transition={{ duration: 1 }}
                 className="relative text-white font-serif text-xl px-16 pb-10"
             >
                 There is immense research being done in the field of AI and
@@ -73,8 +77,8 @@ export default function Home() {
             </motion.p>
             <motion.p
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 3, duration: 1 }}
+                whileInView={{ opacity: 1, y: -200 }}
+                transition={{ duration: 1 }}
                 className="relative text-white font-serif text-xl px-16 pb-10"
             >
                 Just like AI image and text generators like ChatGPT and DALL-E,
@@ -93,8 +97,8 @@ export default function Home() {
             <div className="relative">
                 <motion.div
                     initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 4, duration: 1 }}
+                    whileInView={{ opacity: 1, y: -200 }}
+                    transition={{ duration: 1 }}
                 >
                     <video autoPlay loop muted className="w-full">
                         <source src="EDGE.mp4" type="video/mp4" />
@@ -102,10 +106,18 @@ export default function Home() {
                     </video>
                 </motion.div>
             </div>
+            <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1, y: -200 }}
+                transition={{ duration: 1 }}
+                className="text-center mt-2 font-serif text-sm text-gray-400"
+            >
+                Editable Dance GEneration Example Output
+            </motion.div>
             <motion.p
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 5, duration: 1 }}
+                whileInView={{ opacity: 1, y: -200 }}
+                transition={{ duration: 1 }}
                 className="relative text-white font-serif text-xl px-16 py-10"
             >
                 The use of generative AI is not just a hypothetical tool for
@@ -121,8 +133,8 @@ export default function Home() {
             </motion.p>
             <motion.p
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 5.5, duration: 1 }}
+                whileInView={{ opacity: 1, y: -200 }}
+                transition={{ duration: 1 }}
                 className="relative text-white font-serif text-xl px-16 pb-5"
             >
                 Damien Henry, Head of Innovation at Google Arts and Culture,
@@ -141,33 +153,37 @@ export default function Home() {
                 next pose.
             </motion.p>
             <div className="relative px-16 pb-10">
-                <motion.div
+                <motion.button
+                    whileHover={{
+                        scale: 1.1,
+                        transition: { duration: 1 },
+                    }}
                     onClick={() =>
                         window.open(
                             "https://artsandculture.google.com/story/fgUhvjdg-9RMuw?hl=en"
                         )
                     }
                     initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 5.5, duration: 1 }}
+                    whileInView={{ opacity: 1, y: -200 }}
+                    transition={{ duration: 1 }}
                     className="relative w-48 h-12 flex items-center justify-center rounded-full border border-white bg-black hover:bg-purple-500 text-white text-lg font-serif"
                 >
                     LEARN MORE
-                </motion.div>
+                </motion.button>
             </div>
             <div className="flex justify-between">
                 <motion.img
                     initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 6, duration: 1 }}
+                    whileInView={{ opacity: 1, y: -200 }}
+                    transition={{ duration: 1, delay: 0.5 }}
                     src="livingArchive.jpg" // Replace with the actual path to your first image
                     alt="Image 1"
                     className="w-1/2 h-auto mr-2"
                 />
                 <motion.img
                     initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 6, duration: 1 }}
+                    whileInView={{ opacity: 1, y: -200 }}
+                    transition={{ duration: 1 }}
                     src="livingArchive2.jpg" // Replace with the actual path to your first image
                     alt="Image 1"
                     className="w-1/2 h-auto mr-2"
@@ -175,35 +191,35 @@ export default function Home() {
             </div>
             <motion.div
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 6, duration: 1 }}
+                whileInView={{ opacity: 1, y: -200 }}
+                transition={{ duration: 1 }}
                 className="text-center mt-2 font-serif text-sm text-gray-400"
             >
                 Images from Living Archive: An AI Performance Experiment
             </motion.div>
             <motion.p
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 6.5, duration: 1 }}
+                whileInView={{ opacity: 1, y: -200 }}
+                transition={{ duration: 1 }}
                 className="relative text-white font-serif text-xl px-16 py-5"
             >
-                Another application of Machine Learning to dance is Pose
-                Estimation (PE). PE is when a computer vision model is trained
-                to detect the poses of objects, and in this case, humans.
-                Comparing the poses drawn between professional dancers and dance
-                students can tell a student what they are lacking and how to
-                improve their technique. Pose estimation software can analyze a
-                dancer's movement and provide real-time feedback on their form.
-                This can help dancers identify misalignments, ensure proper
-                technique, and track their progress over time. With a pose
-                estimation system, dancers can practice independently and
-                receive immediate feedback without relying solely on a teacher
-                or mirror.
+                Another application of Machine Learning to dance is{" "}
+                <span className="text-purple-500">Pose Estimation (PE).</span>{" "}
+                PE is when a computer vision model is trained to detect the
+                poses of objects, and in this case, humans. Comparing the poses
+                drawn between professional dancers and dance students can tell a
+                student what they are lacking and how to improve their
+                technique. Pose estimation software can analyze a dancer's
+                movement and provide real-time feedback on their form. This can
+                help dancers identify misalignments, ensure proper technique,
+                and track their progress over time. With a pose estimation
+                system, dancers can practice independently and receive immediate
+                feedback without relying solely on a teacher or mirror.
             </motion.p>
             <motion.p
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 6.5, duration: 1 }}
+                whileInView={{ opacity: 1, y: -200 }}
+                transition={{ duration: 1 }}
                 className="relative text-white font-serif text-xl px-16 pb-5"
             >
                 Pose estimation offers a more objective analysis of movement
@@ -215,11 +231,11 @@ export default function Home() {
                 in their choreography. Below is an example of pose estimation
                 being used on a dancer.
             </motion.p>
-            <div className="relative mx-20 my-10">
+            <div className="relative mx-20 mt-10">
                 <motion.div
                     initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 6.5, duration: 1 }}
+                    whileInView={{ opacity: 1, y: -200 }}
+                    transition={{ duration: 1 }}
                     className="h-auto"
                 >
                     <video autoPlay loop muted className="w-full">
@@ -228,6 +244,14 @@ export default function Home() {
                     </video>
                 </motion.div>
             </div>
+            <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1, y: -200 }}
+                transition={{ duration: 1 }}
+                className="text-center font-serif mt-2 mb-10  text-sm text-gray-400"
+            >
+                Pose Estimation Example
+            </motion.div>
             <div
                 className="relative px-16 pb-10"
                 onClick={() => {
@@ -236,15 +260,86 @@ export default function Home() {
                 }}
             >
                 <motion.div
+                    whileHover={{
+                        scale: 1.1,
+                        transition: { duration: 1 },
+                    }}
                     initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 6.5, duration: 1 }}
+                    whileInView={{ opacity: 1, y: -200 }}
+                    transition={{ duration: 1 }}
                     className="relative w-1/2 h-12 flex items-center justify-center rounded-full border border-white bg-black hover:bg-purple-500 text-white text-lg font-serif"
                 >
                     SIMPLE POSE ESTIMATION DEMO
                 </motion.div>
             </div>
-
+            <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1, y: -200 }}
+                transition={{ duration: 1 }}
+                className="relative text-purple-500 font-serif text-xl px-16 py-5"
+            >
+                *You might want to turn on the sound for the video to the below*
+            </motion.p>
+            <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1, y: -200 }}
+                transition={{ duration: 1 }}
+                className="relative text-white font-serif text-xl px-16 py-5"
+            >
+                This video of robots dancing may initially seem fake, but it has
+                been proven by VFX Artists to be unedited video. These robots
+                were made by{" "}
+                <span className="text-purple-500">Boston Dynamics,</span> a
+                renowned American engineering and robotics design company famous
+                for their creation of highly mobile robots with advanced
+                capabilities. In the video to the right you see <span className="text-purple-500">Atlas,</span> a
+                powerful bipedal humanoid robot designed for research on
+                human-like agility and Spot, a four-legged robot. These robots
+                use machine learning to move without banging into anything.
+            </motion.p>
+            <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1, y: -200 }}
+                transition={{ duration: 1 }}
+                className="relative mx-20 my-10"
+            >
+                <video autoPlay loop muted controls>
+                    <source src="doYouLoveMe.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </motion.div>
+            <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1, y: -200 }}
+                transition={{ duration: 1 }}
+                className="relative text-white font-serif text-xl px-16 pb-5"
+            >
+                These dancing robots are pushing the frontiers of what we
+                consider dance. When we think of conventional dance, it tends to
+                include solely humans, but even birds, bees, and apes dance
+                without human influence. Although these metal mannequins are
+                entertaining to watch, they don't have the same emotions that
+                professional dancers manifest. There is a long way to go before
+                these guys can compete with real dancers but the possibility is
+                real. AI has infilitrated other arts forms in more visible ways
+                already. Midjourney, DALLE-2, Adobe Firefly and others have been
+                creating amazing digital artwork. Kits.ai, ACE Studio, and
+                Vocaloid have been creating entire songs with vocals in minutes.
+                Although AI hasn't significantly broken into cinema, television,
+                and dance yet, it will soon. AI will be an integral part of many
+                aspects of our world in the coming years. The challenge lies in
+                integrating AI into art in a way that fosters artistic
+                expression while safeguarding cultural heritage.
+            </motion.p>
+            <div className="mt-16"></div>
+            <motion.h1
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1, y: -150, scale: 1.5 }}
+                transition={{ duration: 1 }}
+                className="text-white font-serif text-4xl text-center"
+            >
+                Thanks for visiting! 🕺💃
+            </motion.h1>
             <BackToTopButton />
         </div>
     );

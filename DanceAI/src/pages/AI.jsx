@@ -14,12 +14,6 @@ const UserPose = () => {
     const landmarkRef = useRef(null);
     // landmarkRef = new LandmarkGrid(landmarkContainer);
     let camera = null; // variable to initialize the camera
-    // List of predefined poses
-    // const predefinedPoses = [
-    //     { name: "Pose A", landmarks: [...], /* Define landmark coordinates */ },
-    //     { name: "Pose B", landmarks: [...], /* Define landmark coordinates */ },
-    //     // Add more predefined poses as needed
-    // ];
 
     // function to draw the landmarks once the pose has been determnined
     function onResults(results) {
@@ -95,7 +89,7 @@ const UserPose = () => {
                 </div>
                 <div className="px-16 py-10">
                     <motion.p
-                        className="text-lg text-white font-serif mb-5"
+                        className="text-lg text-purple-500 font-serif mb-5"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 1 }}
@@ -110,12 +104,10 @@ const UserPose = () => {
                     >
                         Many pose estimation technologies for learning dances
                         and improving dance techniques have been released but
-                        unfortunately not many are free. I implemented the{" "}
-                        <span className="text-purple-500">
-                            MediaPipe Pose model
-                        </span>{" "}
-                        to estimate your pose on this page. This lets you
-                        compare your poses to that of the video below.
+                        unfortunately not many are free. I created and
+                        implemented a computer vision model to estimate your
+                        pose on this page. This lets you compare your poses to
+                        that of the video below.
                     </motion.p>
                 </div>
                 <div style={{ position: "relative" }}>
@@ -142,8 +134,18 @@ const UserPose = () => {
                         }}
                     ></canvas>
                 </div>
-
-                <div className="landmark-grid-container"></div>
+                <img
+                    src="danceSteps.jpg"
+                    alt="dance"
+                    style={{
+                        position: "absolute",
+                        left: "10vw",
+                        top: "calc(100vw * 15 / 16)", // Push the image below the webcam and canvas
+                        zIndex: 8, // Ensure image appears below canvas and webcam
+                        width: "80vw",
+                        height: "calc(100vw * 9 / 16)",
+                    }}
+                />
             </div>
         </div>
     );
