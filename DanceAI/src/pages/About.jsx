@@ -12,9 +12,8 @@ export default function About() {
                 <h1 className="text-4xl">Welcome to My Website</h1>
                 <p className="text-xl">
                     Hi there! I am Veer Shah and I created this website using
-                    React.js for DANC1310 - Understanding Dance. It is hosted
-                    using AWS Amplify. Feel free to check out the source code on
-                    GitHub:
+                    React.js for DANC1310 - Understanding Dance. Feel free to
+                    check out the source code on GitHub:
                 </p>
                 <div className="my-5"></div>
                 <motion.a
