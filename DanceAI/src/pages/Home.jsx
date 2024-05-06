@@ -278,7 +278,7 @@ export default function Home() {
                 transition={{ duration: 1 }}
                 className="relative text-purple-500 font-serif text-xl px-16 py-5"
             >
-                *You might want to turn on the sound for the video to the below*
+                *You might want to turn on the sound for the video the below*
             </motion.p>
             <motion.p
                 initial={{ opacity: 0 }}
@@ -292,10 +292,11 @@ export default function Home() {
                 <span className="text-purple-500">Boston Dynamics,</span> a
                 renowned American engineering and robotics design company famous
                 for their creation of highly mobile robots with advanced
-                capabilities. In the video to the right you see <span className="text-purple-500">Atlas,</span> a
-                powerful bipedal humanoid robot designed for research on
-                human-like agility and Spot, a four-legged robot. These robots
-                use machine learning to move without banging into anything.
+                capabilities. In the video to the right you see{" "}
+                <span className="text-purple-500">Atlas,</span> a powerful
+                bipedal humanoid robot designed for research on human-like
+                agility and Spot, a four-legged robot. These robots use machine
+                learning to move without banging into anything.
             </motion.p>
             <motion.div
                 initial={{ opacity: 0 }}
